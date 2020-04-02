@@ -1,0 +1,25 @@
+{
+    "name": "hlbl",
+    "displayName": "hlbl",
+    "description": "hlbl foxboro",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.43.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "hlbl",
+            "aliases": ["HLBL", "hlbl"],
+            "extensions": [".s"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "hlbl",
+            "scopeName": "source.hlbl",
+            "path": "./syntaxes/hlbl.tmLanguage.json"
+        }]
+    }
+}

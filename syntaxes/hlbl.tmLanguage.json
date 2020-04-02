@@ -1,0 +1,148 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "HLBL",
+	"patterns": [
+		{
+			"include": "#main"
+		}
+	],
+	"repository": {
+		
+		"main":{
+			"patterns":[
+				{
+					"include": "#comments"
+				},
+				{
+					"include": "#strings"
+				},
+				{
+					"comment": "Unsecured connections start with : and continue until a space or ;",
+					"name": "entity.name.unsecured.hlbl",
+					"match": ":[^\\s=;]+\\b"
+				},
+				{
+					"comment": "Labels are surrounded by << >> or $$ $$",
+					"name": "entity.name.hlbl",
+					"match": "(<|\\$){2}\\w+(>|\\$){2}"
+				},
+				{
+					"comment": "Preprocessor directives begin with a '#' and finish at the end of the following word.",
+					"name": "keyword.control.import.hlbl",
+					"match": "#\\w+"
+				},
+				{
+					"comment": "List Input/Output labels",
+					"name": "keyword.declaration.hlbl",
+					"match": "\\bBI00(0[1-9]|1[0-9]|2[0-4])"
+				},
+				{
+					"comment": "List Input/Output labels",
+					"name": "keyword.declaration.hlbl",
+					"match": "\\bBO00(0[1-9]|1[0-6])\\b"
+				},
+				{
+					"comment": "List Input/Output labels",
+					"name": "keyword.declaration.hlbl",
+					"match": "\\bBA000[1-4]\\b"
+				},
+				{
+					"comment": "List Input/Output labels",
+					"name": "keyword.declaration.hlbl",
+					"match": "\\bR[IO]00(0[1-9]|1[0-5])\\b"
+				},
+				{
+					"comment": "List Input/Output labels",
+					"name": "keyword.declaration.hlbl",
+					"match": "\\bRA00(0[1-2]|1[0-5])\\b"
+				},
+				{
+					"comment": "List Input/Output labels",
+					"name": "keyword.declaration.hlbl",
+					"match": "\\bII000[1-8]\\b"
+				},
+				{
+					"comment": "List Input/Output labels",
+					"name": "keyword.declaration.hlbl",
+					"match": "\\bIO000[1-5]\\b"
+				},
+				{
+					"comment": "List Input/Output labels",
+					"name": "keyword.declaration.hlbl",
+					"match": "\\bIA0001\\b"
+				},
+				{
+					"comment": "List Input/Output labels",
+					"name": "keyword.declaration.hlbl",
+					"match": "\\bSN00(0[1-9]|10)\\b"
+				},
+				{
+					"comment": "List Input/Output labels",
+					"name": "keyword.declaration.hlbl",
+					"match": "\\b(B|I|R|S|S12|S6)\\b"
+				},
+				{
+					"comment": "List HLBL keywords",
+					"name": "keyword.control.hlbl",
+					"match": "\\b(ABORT|ABS|ACTCASES|ACTIVATE|ACTIVE|AFTER|ALREADY|AND|BAD|BIT_PATTERN|BLOCK_EXCEPTION|BLOCK_NAME|BLOCK_STMNO|CALL|CASES|COMPOUND_NAME|CONSTANTS|DEPENDENT_SEQUENCE|DISABLE|DIV|DO|DOWNTO|E|ELSE|ELSEIF|ENDEXCEPTION|ENDFOR|ENDIF|ENDMONITOR|ENDSEQUENCE|ENDSUBROUTINE|ENDWHILE|EXCEPTION|EXCEPTION_SEQUENCE|EXIT|EXITLOOP|FOR|GOTO|IF|INACTIVE|INDEPENDENT_SEQUENCE|MOD|MONITOR|MULT_ARRAY|NOT|ON|OP_ERR|OR|ORD|REPEAT|RETRY|ROUND|SBXNO|SECURED|SENDCONF|SENDMSG|SENDMSG|SET_ARRAY|SET_SBXS|SQRT|START_TIMER|STATEMENTS|STEPNO|STMNO|STOP_TIMER|STRING|SUBR_LEVEL|SUBRNO|SUBROUTINE|SUM_ARRAY|THEN|TIMER|TO|TRUNC|UNTIL|USER_LABELS|VARIABLES|WAIT|WHEN|WHILE)\\b"
+				},
+				{
+					"comment": "List HLBL keywords",
+					"name": "keyword.operator.hlbl",
+					"match": "(:=|\\*|\\+|-|/|<>)"
+				},
+				{
+					"comment": "Highlight numbers",
+					"name": "constant.numeric.integer.hlbl",
+					"match": "\\b(-)?[0-9]+\\b"
+				},
+				{
+					"comment": "Highlight numbers",
+					"name": "constant.numeric.hlbl",
+					"match": "\\b(-)?[0-9.]+\\b"
+				},
+				{
+					"comment": "Highlight numbers",
+					"name": "constant.language.hlbl",
+					"match": "(TRUE|FALSE)"
+				}
+			]
+		},
+		"strings": {
+			"comment": "Strings begin and end with quotes, and use backslashes as an escape character.",
+			"name": "string.quoted.double.hlbl",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.hlbl",
+					"match": "\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"comment": "Comments begin with a '//' and finish at the end of the line.",
+					"name": "comment.line.double-slash.hlbl",
+					"begin": "//",
+					"end": "$\n?"
+				},
+				{
+					"comment": "Comments block begin with a '{' and finish at the end with a '}'",
+					"name": "comment.block.documentation.hlbl",
+					"begin": "{",
+					"end": "}"
+				},
+				{
+					"comment": "Comments block begin with a '/*' and finish at the end with a '*/'",
+					"name": "comment.block.documentation.hlbl",
+					"begin": "/\\*",
+					"end": "\\*/"
+				}
+			]
+		}
+
+	},
+	"scopeName": "source.hlbl"
+}
