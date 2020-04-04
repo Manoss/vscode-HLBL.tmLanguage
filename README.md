@@ -9,11 +9,19 @@ Visual Code studio 1.43.0 or later
 
 ## Installation
 
+<<<<<<< Updated upstream
 * From .vsix : 
 
 https://code.visualstudio.com/docs/editor/extension-gallery#_install-from-a-vsix
 
 * From MarketPlace :
+=======
+From .vsix : 
+
+https://code.visualstudio.com/docs/editor/extension-gallery#_install-from-a-vsix
+
+From MarketPlace :
+>>>>>>> Stashed changes
 
 https://code.visualstudio.com/docs/editor/extension-gallery#_browse-for-extensions
 
