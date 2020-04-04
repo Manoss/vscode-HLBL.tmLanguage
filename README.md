@@ -1,25 +1,19 @@
-# hlbl README
-
-This is the README for your extension "hlbl". After writing up a brief description, we recommend including the following sections.
-
-## Features
+# vscode-hlbl
 
 HLBL Hightlightning For Visual Studio Code
 HLBL is an IAS Foxboro language
 
-## Requirements
+## Prerequisites
 
-Visual Code studio 1.43.0
+Visual Code studio 1.43.0 or later
 
-## Known Issues
+## Releases
 
+* 0.0.1
 
+ * Initial release 
 
-## Release Notes
+ ## License
 
-First Release
-
-### 0.0.1
-
-Initial release 
+ Licensed under the [MIT](LICENSE.txt) license.
 
