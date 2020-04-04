@@ -1,7 +1,7 @@
 # vscode-hlbl
 
-HLBL Hightlightning For Visual Studio Code
-HLBL is an IAS Foxboro language
+HLBL Hightlightning For Visual Studio Code.</br>
+HLBL is an IAS Foxboro language.
 
 ## Prerequisites
 
