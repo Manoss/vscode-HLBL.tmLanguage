@@ -15,16 +15,18 @@ https://code.visualstudio.com/docs/editor/extension-gallery#_install-from-a-vsix
 
 From MarketPlace :
 
+https://marketplace.visualstudio.com/items?itemName=Manoss.hlbl
+
 https://code.visualstudio.com/docs/editor/extension-gallery#_browse-for-extensions
 
 
 ## Releases
 
 * 0.0.1
-
- * Initial release 
+ - Initial release 
 
  ## License
 
- Licensed under the [MIT](LICENSE.txt) license.
+ Licensed under the GPL 3.0 license.
+ https://www.gnu.org/licenses/gpl-3.0.en.html
 

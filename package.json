@@ -8,6 +8,11 @@
     "engines": {
         "vscode": "^1.43.0"
     },
+    "keywords": [
+        "Foxboro",
+        "IAS",
+        "Schneider"
+    ],
     "categories": [
         "Programming Languages"
     ],
